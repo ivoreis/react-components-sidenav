@@ -3,12 +3,13 @@ import doczPluginGithubPage from 'docz-plugin-github-page';
 
 export default {
   plugins: [doczPluginGithubPage()],
-  title: 'Library name',
+  title: 'React SideNav Component',
   public: './public',
   description: pkg.description,
   base: `/${pkg.name}/`,
   version: pkg.version,
-  propsParser: false,
+  propsParser: true,
+  notUseSpecifiers: true,
   hashRouter: true,
   typescript: true,
   themeConfig: {

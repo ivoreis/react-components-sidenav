@@ -1,0 +1,64 @@
+---
+name: SideNav
+route: /components
+order: 1
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import { SideNav, NavItem, NavText, NavIcon, Nav, Toggle } from '../src';
+
+# SideNav
+
+## Props
+
+<Props of={SideNav} />
+
+## Basic usage
+
+```js
+<SideNav />
+```
+
+<Playground>
+  {() => {
+    const onSelect = () => {
+      console.log('selected');
+    };
+    const onToggle = () => {
+      console.log('toggled');
+    };
+
+    return (
+      <SideNav onSelect={onSelect} onToggle={onToggle}>
+        <Toggle />
+        <Nav selectedEventKey={'devices'}>
+          <NavItem eventKey='home'>
+            <NavIcon>Icon</NavIcon>
+            <NavText title='Home'>Home</NavText>
+          </NavItem>
+          <NavItem eventKey='devices'>
+            <NavIcon>Icon</NavIcon>
+            <NavText title='Devices'>Devices</NavText>
+          </NavItem>
+          <NavItem eventKey='reports'>
+            <NavIcon>Icon</NavIcon>
+            <NavText title='Reports'>Reports</NavText>
+          </NavItem>
+          <NavItem eventKey='settings'>
+            <NavIcon>Icon</NavIcon>
+            <NavText title='Settings'>Settings</NavText>
+            <NavItem eventKey='settings/policies'>
+              <NavText title='Policies'>Policies</NavText>
+            </NavItem>
+            <NavItem eventKey='settings/network'>
+              <NavText title='Network'>Network</NavText>
+            </NavItem>
+          </NavItem>
+        </Nav>
+      </SideNav>
+    );
+
+}}
+
+</Playground>

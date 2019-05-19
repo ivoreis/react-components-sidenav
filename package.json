@@ -36,7 +36,8 @@
     "deploy-docs": "node scripts/gh-pages-publish.js"
   },
   "dependencies": {
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "warning": "^4.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.1"
@@ -62,6 +63,7 @@
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.17",
     "@types/styled-components": "^4.1.15",
+    "@types/warning": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "docz": "^1.2.0",
@@ -83,8 +85,8 @@
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^7.0.0",
     "semantic-release": "^15.13.14",
-    "typescript": "^3.4.5",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "typescript": "^3.4.5"
   },
   "publishConfig": {
     "access": "public"
@@ -115,7 +117,7 @@
     "useTabs": false,
     "trailingComma": "all",
     "singleQuote": true,
-    "printWidth": 120,
+    "printWidth": 80,
     "tabWidth": 2
   },
   "commitlint": {
